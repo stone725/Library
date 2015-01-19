@@ -42,4 +42,9 @@ struct Union_Find {
 	bool same( int x, int y ) {
 		return find( x ) == find( y );
 	}
+
+	//サイズを返す
+	unsigned int size() {
+		return par.size();
+	}
 };
