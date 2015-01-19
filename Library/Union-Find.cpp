@@ -7,9 +7,11 @@ struct Union_Find {
 
 	//初期化
 	void init( int n ) {
+		par.resize( n );
+		rank.resize( n );
 		for ( int i = 0; i < n; ++i ) {
-			par.push_back( i );
-			rank.push_back( 0 );
+			par[ i ] = i;
+			rank[ i ] = 0;
 		}
 	}
 
