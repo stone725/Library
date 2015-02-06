@@ -29,13 +29,13 @@ struct Union_Find {
 		if ( a == b ) {
 			return;
 		}
-		if ( rank[ x ] < rank[ y ] ) {
-			par[ x ] = y;
+		if ( rank[ a ] < rank[ b ] ) {
+			par[ a ] = b;
 		}
 		else {
-			par[ y ] = x;
-			if ( rank[ x ] == rank[ y ] ) {
-				++rank[ x ];
+			par[ a ] = b;
+			if ( rank[ a ] == rank[ b ] ) {
+				++rank[ b ];
 			}
 		}
 	}
